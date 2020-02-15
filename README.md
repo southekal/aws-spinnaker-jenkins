@@ -57,10 +57,10 @@ load balance:
 note: amazon linux t2.micro may have an older version of java installed for jenkins:
 - `sudo yum install java-1.8.0`
 - `sudo yum remove java-1.7.0-openjdk`
-- jenkins url: `http://ec2-34-213-197-218.us-west-2.compute.amazonaws.com:8080/`
+- jenkins url: `http://ec2-52-41-129-167.us-west-2.compute.amazonaws.com:8080/`
 
 ```
-ssh -i ~/sandip-pixelbook.pem ec2-user@ec2-34-213-197-218.us-west-2.compute.amazonaws.com
+ssh -i ~/sandip-pixelbook.pem ec2-user@ec2-52-41-129-167.us-west-2.compute.amazonaws.com
 ```
 
 - things with jenkins server:
