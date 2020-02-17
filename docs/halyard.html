@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://getbootstrap.com/docs/4.4/examples/cover/cover.css">
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+
+    <title>halyard</title>
+
+  </head>
+  <body>
+    <div class="container">
+      <main role="main" class="inner cover" style="margin-top: 60px;">
+       
+        <div id="getStartedAWS">
+          <p><a href="landing.html" class="btn btn btn-link">Start Over</a></p>
+          <h1 class="cover-heading">Install halyard</h1>
+          <p class="lead">
+            <ul>
+              <li><kbd>halyard</kbd> is a command line tool that manages the lifecycle of Spinnaker deployment including writing & validating your deployment’s configuration, deploying each of Spinnaker’s microservices, and updating the deployment.</li>
+              <li>Install halyard. Refer <b><a target="_blank" href="https://www.spinnaker.io/setup/install/halyard//">halyard installation documentation</a></b> to install based on your system. In this flow, we will be installing <kbd>halyard</kbd> <b>locally</b> on our machine.</li>
+              <li>Verify that <kbd>halyard</kbd> is available in your <kbd>$PATH</kbd> via <kbd>hal -v</kbd></li>
+            </ul>
+            <br>
+          </p>
+
+          <h4>Common issues</h4>
+          <p class="lead">
+            <ul>
+              <li>on a <kbd>linux</kbd> system when locally installing halyard, you might run into a <kbd>/usr/lib/sysusers.d/halyard.conf: No such file or directory</kbd> issue. Manually creating a directory <kbd>mkdir /usr/lib/sysusers.d</kbd> allows the installation process to go through successfully. <br>open issue:<a target="_blank" class="btn btn-link" href="https://github.com/spinnaker/spinnaker/issues/4964">https://github.com/spinnaker/spinnaker/issues/4964</a></li>
+            </ul>
+            <br>
+          </p>
+          
+          <p class="lead">
+            <a href="kubectl.html" class="btn btn-sm btn-secondary"><= back</a>
+            <a href="eks-spinnaker.html" class="btn btn-lg btn-secondary">Install Spinnaker</a>
+          </p>
+        </div>
+
+      </main>
+    </div>
+    
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  </body>
+</html>

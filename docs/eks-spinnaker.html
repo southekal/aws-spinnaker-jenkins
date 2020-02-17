@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://getbootstrap.com/docs/4.4/examples/cover/cover.css">
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+
+    <title>eks-spinnaker</title>
+
+  </head>
+  <body>
+    <div class="container">
+      <main role="main" class="inner cover" style="margin-top: 60px;">
+       
+        <div id="getStartedAWS">
+          <p><a href="landing.html" class="btn btn btn-link">Start Over</a></p>
+          <h1 class="cover-heading">Install Spinnaker using Amazon EKS (Distributed Installation)</h1>
+          <p class="lead">
+            <ul>
+              <li>We are going to be installing Spinnaker by using Kubernetes V2 provider for Amazon EKS (container management)</li>
+              <li>Refer documentation: <a target="_blank" class="btn btn-link" href="https://www.spinnaker.io/setup/install/providers/kubernetes-v2/aws-eks/">Amazon EKS setup</a> that goes through the process of creating a <kbd>managing</kbd> and <kbd>managed</kbd> account on AWS using <kbd>Cloudformation.</kbd><br><br><h5><u>Note: there is a bug on creating the <kbd>managing.yml</kbd>. Refer to common issues below to fix the problem</u></h5></li>
+              <li>Cloudformation will create a two-subnet VPC, IAM roles, instance profiles, and a Security Group for EKS control-plane communications and an EKS cluster.</li>
+              <li>Ensure your <kbd>~~/.hal/config</kbd> file has the data entered from the values of the managing and managed account.</li> 
+              <li>Once the <kbd>managed</kbd> and <kbd>managing</kbd> account are created, launch and configure the EKS worker nodes which are then joined to the <kbd>Spinnaker EKS cluster</kbd> via the <kbd>aws-auth-cm.yaml</kbd> file.</li>
+              <li>In a <b><kbd>Distributed Installation of Spinnaker on Kubernetes</kbd></b>, each of Spinnaker's microservices are deployed separately which is highly recommended for production usage. Refer to: <a target="_blank" class="btn btn-link" href="https://www.spinnaker.io/setup/install/environment/#distributed-installation">distributed installation documentation</a> </li>
+            </ul>
+            <br>
+          </p>
+
+          <h4>Common issues</h4>
+          <p class="lead">
+            <ul>
+              <li><kbd>cloudformation</kbd> deploy on trying to create <kbd>managing.yml</kbd>runs into an error due to an old version of kubernetes. Manually update the kubernetes version to be <kbd> 1.10 (used 1.12)</kbd> mentioned in <kbd>managing.yml</kbd><br>Open issue: <a class="btn btn-link" target="_link" href="https://github.com/spinnaker/spinnaker.github.io/issues/1548">https://github.com/spinnaker/spinnaker.github.io/issues/1548</a></li>
+            </ul>
+            <br>
+          </p>
+          
+          <p class="lead">
+            <a href="halyard.html" class="btn btn-sm btn-secondary"><= back</a>
+            <a href="storage.html" class="btn btn-lg btn-secondary">Create persistent storage</a>
+          </p>
+        </div>
+
+      </main>
+    </div>
+    
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  </body>
+</html>

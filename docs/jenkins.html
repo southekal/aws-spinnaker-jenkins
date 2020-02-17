@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://getbootstrap.com/docs/4.4/examples/cover/cover.css">
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+
+    <title>setup jenkins</title>
+
+  </head>
+  <body>
+    <div class="container">
+      <main role="main" class="inner cover" style="margin-top: 60px;">
+       
+        <div id="getStartedAWS">
+          <p><a href="landing.html" class="btn btn btn-link">Start Over</a></p>
+          <h1 class="cover-heading">Setup Jenkins for Continuous Integration</h1>
+          <p class="lead">
+            <ul>
+              <li>In order to create a simple pipeline service that Spinnaker can execute, lets setup Continuous Integration using <kbd>Jenkins</kbd></li>
+              <li>Set up Jenkins as an <kbd>AWS EC2</kbd> service. Refer to https://d1.awsstatic.com/Projects/P5505030/aws-project_Jenkins-build-server.pdf that goes over the task of creating a Jenkins server that allows <kbd>SSH</kbd> and outside world access through port <kbd>8080</kbd></li>
+              <li>Create a new Jenkins job of type <kbd>Multibranch pipeline</kbd> that looks at the appropriate <kbd>git</kbd> repository to build.</li>
+              <li>Next, we will trigger Spinnaker pipelines with Jenkins</li>
+            </ul>
+            <br>
+          </p>
+          <h4 class="cover-heading">Things to look out for</h4>
+          <p class="lead">
+            <ul>
+              <li>In the <kbd>Global Tool Configuration</kbd> section of Jenkins, ensure that you have installed project requirements such as: <kbd>maven, java, docker</kbd> etc</li>
+              <li>If you run into issues with Jenkins being unable to run docker then fix user permissions with <kbd>sudo usermod -a -G docker jenkins</kbd> and restart the jenkins service with <kbd>sudo service jenkins restart</kbd> on the EC2 server.</li>
+            </ul>
+            <br>
+          </p>
+  
+          <p class="lead">
+            <a href="deploy.html" class="btn btn-sm btn-secondary"><= back</a>
+            <a href="pipeline.html" class="btn btn-lg btn-secondary">create pipeline trigger</a>
+          </p>
+        </div>
+
+      </main>
+    </div>
+    
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  </body>
+</html>
